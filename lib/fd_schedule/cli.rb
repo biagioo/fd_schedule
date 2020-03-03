@@ -1,6 +1,6 @@
-class FdSchedule::CLI 
+class CLI 
   
-  def call 
+  def start 
     puts "Hey there! The 2020 Forumla Drift season is starting soon!"
     schedule
     menu
@@ -32,6 +32,7 @@ class FdSchedule::CLI
   end
   
   def fairwell 
+    Scraper.scrape_schedule_page
     puts "Thanks for stopping by! Enjoy the rest of your day!"
   end 
 

@@ -1,3 +1,3 @@
-class FdSchedule::Events
+class Events
   
 end 
