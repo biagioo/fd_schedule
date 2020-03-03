@@ -26,13 +26,13 @@ class CLI
       when "schedule"
         schedule
       else 
-        "hmm not sure what you mean, try typing schedule, the round you want more information on or exit"
+        puts "hmm, not sure what you mean. Try entering schedule, the round you want more information on or exit."
       end 
     end 
   end
   
   def fairwell 
-    Scraper.scrape_schedule_page
+    Scraper.scrape_for_events
     puts "Thanks for stopping by! Enjoy the rest of your day!"
   end 
 
