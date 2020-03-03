@@ -1,6 +1,8 @@
-require "fd_schedule/version"
+require_relative "fd_schedule/version"
 
 module FdSchedule
-  class Error < StandardError; end
-  # Your code goes here...
+  # class Error < StandardError; end
+  # # Your code goes here...
 end
+
+require_relative '../config/environment'
