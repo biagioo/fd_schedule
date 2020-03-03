@@ -19,7 +19,7 @@ USEFUL RESOURCES:
 
 IDEAS: 
 	FD schedule
-Hey there! I'd love to show you the up coming schedule for Forumla Drift. If you'd like to see it, enter 'schedule', if not, enter 'exit'. 
+Hey there! If you'd like to see the 2020 Forumula Drift Schedule, enter 'schedule', if not, enter 'exit'. 
 
 Great here it is: 
 1. Title
