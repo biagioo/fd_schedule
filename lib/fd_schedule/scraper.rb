@@ -4,7 +4,7 @@ class Scraper
     events = []
     doc = Nokogiri::HTML(open("https://www.formulad.com/schedule"))
     events << doc.css(".event-summary .name").text
-    #binding.pry
+    binding.pry
     events.collect { |name| puts name.split}
   end
   
