@@ -9,7 +9,7 @@ class CLI
   
   def schedule 
     puts "Here is the 2020 Schedule"
-    #Scraper.event_names
+    Scraper.event_names
     Scraper.more_info
   end
   

@@ -9,21 +9,19 @@ class Scraper
   def self.more_info
     html = "https://www.formulad.com/schedule"
     doc = Nokogiri::HTML(open(html))
-    card_events = doc.css("div.card.card-event .event-summary")
-    card_events.each do |events|
+    events = Array.new
+    events_sum = doc.css("div.card.card-event .event-summary")
+    events_sum.each do |event_sum|
       event = {
-        :name => events.css(".name").text,
-        :date => events.css(".dates").text,
-        :league => events.css(".leagues").text, 
-        :location => events.css(".location").text
+        :name => event_sum.css(".name").text,
+        :date => event_sum.css(".dates").text,
+        :league => event_sum.css(".leagues").text, 
+        :location => event_sum.css(".location").text,
+        :details => html.gsub("/schedule","") + event_sum.css("a").attribute("href").value
       }
-      binding.pry
+      events << event
     end
-    
-    # date = doc.css(".event-summary .dates")[0].text
-    # league = doc.css(".event-summary .leagues")[0].text
-    #location = doc.css(".event-summary .location")[0].text
-    #url for specific details =  html.chomp"schedule" + doc.css(".event-summary a").attribute("href").value
+    binding.pry
   end 
   
 end 
