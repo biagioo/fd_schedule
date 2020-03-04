@@ -1,17 +1,9 @@
 class Scraper
   
-  def self.scrape_for_events 
-     
-      doc = Nokogiri::HTML(open("https://www.formulad.com/schedule"))
-      all_events = doc.css(".event-summary")
-      all_events.each do |events|
-        event = {:name => all_events.css(".name").text 
-  	     :location => all_events.css(".location").text
-  	     :league => all_events.css(".leagues").text
-  	     :dates => all_events.css(".dates").text
-        }
-  	    binding.pry
-      end
+  def self.event_names 
+    doc = Nokogiri::HTML(open("https://www.formulad.com/schedule"))
+    event_names = doc.css(".event-summary .name") # 9 events
+    event_names.each.with_index{ |name, i| puts "#{i+1} --#{name.text}"}
     end
   
   def self.scrape_for_more_info

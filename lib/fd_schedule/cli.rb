@@ -9,15 +9,13 @@ class CLI
   
   def schedule 
     puts "Here is the 2020 Schedule"
-    Scraper.scrape_for_events
-    # puts "Round 1"
-    # puts "Round 2"
+    Scraper.event_names
   end
   
   def menu
     input = nil 
     while input != "exit"
-      puts "Enter the round you'd like to more information on or enter schedule to view the schedule again or type exit"
+      puts "Enter the number of the event you'd like to more information on or enter schedule to view the schedule again or type exit"
       input = gets.strip.downcase 
       case input 
       when "round 1"
