@@ -9,8 +9,9 @@ class CLI
   
   def schedule 
     puts "Here is the 2020 Schedule"
-    puts "Round 1"
-    puts "Round 2"
+    Scraper.scrape_for_events
+    # puts "Round 1"
+    # puts "Round 2"
   end
   
   def menu
@@ -32,7 +33,6 @@ class CLI
   end
   
   def fairwell 
-    Scraper.scrape_for_events
     puts "Thanks for stopping by! Enjoy the rest of your day!"
   end 
 
