@@ -2,7 +2,7 @@ class CLI
   
   def start 
     puts "Hey there! The 2020 Forumla Drift season is starting soon!"
-    Events.more_info
+    Scraper.scrape_info
     schedule
     menu
     fairwell
@@ -10,7 +10,6 @@ class CLI
   
   def schedule 
     puts "Here is the 2020 Schedule"
-    #Events.names
   end
   
   def menu

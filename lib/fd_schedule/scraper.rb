@@ -5,7 +5,6 @@ class Scraper
     html = "https://www.formulad.com/schedule"
     doc = Nokogiri::HTML(open(html))
     events_sum = doc.css("div.card.card-event .event-summary")
-    binding.pry
     events_sum.each do |event_sum|
       event = {
         :name => event_sum.css(".name").text,
@@ -14,15 +13,17 @@ class Scraper
         :location => event_sum.css(".location").text,
         :details => html.gsub("/schedule","") + event_sum.css("a").attribute("href").value
       }
-      #Events.new(name, date, league, location, details)
-      #each event needs to be an instance of the Events class. When this becomes true, Events.all will hold 9 instances(theyre are 9 events)
-      # and will be assigned the approiate attr_accessor values
+      events << event
     end
+    events
+    binding.pry
   end 
 
 end 
 
-
+      #Events.new(name, date, league, location, details)
+      #each event needs to be an instance of the Events class. When this becomes true, Events.all will hold 9 instances(theyre are 9 events)
+      # and will be assigned the approiate attr_accessor values
 
 
   # def self.scrape_events 
