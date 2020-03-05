@@ -15,14 +15,4 @@ class Events
      @@all 
   end
   
-  def self.event_names 
-    @@all.each.with_index do |event, i| 
-      puts "#{i+1} --  #{event.name}"
-    end 
-  end 
-  
-  def self.event_info 
-    
-  end 
-  
 end 

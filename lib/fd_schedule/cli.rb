@@ -1,25 +1,37 @@
 class CLI 
   
   def start 
-    puts "Hey there! The 2020 Forumla Drift season is starting soon!"
     Scraper.scrape_info
+    puts "Hey there! The 2020 Forumla Drift season is starting soon!"
     schedule
     menu
     fairwell
   end
   
+  def get_events
+     Events.all 
+  end
+  
+  def event_info 
+    get_events.find do |event| 
+      puts "#{event.name} - #{event.league} - #{event.date} - #{event.location} - #{event.details}"
+    end 
+  end 
+  
   def schedule 
     puts "Here is the 2020 Schedule"
-    Events.event_names 
+    get_events.each.with_index do |event, i| 
+      puts "#{i+1} --  #{event.name}"
+    end 
   end
   
   def menu
     input = nil 
     while input != "exit"
-      puts "Enter the number of the event you'd like to more information on or enter schedule to view the schedule again or type exit"
+      puts "Enter the number of the event you'd like to learn more about, enter schedule to view the schedule again or type exit"
       input = gets.strip.downcase 
       case input 
-      when "round 1"
+      when ""
         puts "RD:1 info"
       when "round 2"
         puts "RD:2 info"
