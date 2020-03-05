@@ -2,7 +2,7 @@ class Events
   attr_accessor :name, :date, :league, :location, :details
   @@all = []
   
-  def initilialze(name, date, league, location, details) 
+  def initialize(name, date, league, location, details) 
     @name = name
     @date = date
     @league = league
@@ -12,7 +12,13 @@ class Events
   end 
   
   def self.all 
-    @@all 
+     @@all 
   end
+  
+  def self.event_names 
+    @@all.collect do |event| 
+      event.name
+    end 
+  end 
   
 end 

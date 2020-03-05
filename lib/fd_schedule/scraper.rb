@@ -15,9 +15,12 @@ class Scraper
       }
       events << event
     end
-    events
-    binding.pry
-  end 
+    events.each do |event| 
+      Events.new(*event.values)
+    end
+  end
+  
+  
 
 end 
 

@@ -3,6 +3,7 @@ class CLI
   def start 
     puts "Hey there! The 2020 Forumla Drift season is starting soon!"
     Scraper.scrape_info
+    puts Events.event_names 
     schedule
     menu
     fairwell
