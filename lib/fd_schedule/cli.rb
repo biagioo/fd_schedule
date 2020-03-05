@@ -64,12 +64,8 @@ class CLI
         get_events[7].tap do |event| 
           puts "Name: #{event.name} League: #{event.league} Date: #{event.date} Location: #{event.location} For more details: #{event.details}"
         end
-      when "8"
-        get_events[8].tap do |event| 
-          puts "Name: #{event.name} League: #{event.league} Date: #{event.date} Location: #{event.location} For more details: #{event.details}"
-        end
       when "9"
-        get_events[9].tap do |event| 
+        get_events[8].tap do |event| 
           puts "Name: #{event.name} League: #{event.league} Date: #{event.date} Location: #{event.location} For more details: #{event.details}"
         end
       when "schedule"
