@@ -15,22 +15,10 @@ class Scraper
       }
       events << event
     end
+    
     events.each do |event| 
       Events.new(*event.values)
     end
   end
   
-  
-
 end 
-
-      #Events.new(name, date, league, location, details)
-      #each event needs to be an instance of the Events class. When this becomes true, Events.all will hold 9 instances(theyre are 9 events)
-      # and will be assigned the approiate attr_accessor values
-
-
-  # def self.scrape_events 
-  #   doc = Nokogiri::HTML(open("https://www.formulad.com/schedule"))
-  #   event_names = doc.css(".event-summary .name") # 9 events
-  #   event_names.each.with_index{ |name, i| puts "#{i+1} -- #{name.text}"}
-  # end
