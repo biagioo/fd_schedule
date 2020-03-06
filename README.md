@@ -1,8 +1,6 @@
 # FdSchedule
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fd_schedule`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome! I've created a program that scrapes the schedule for the 2020 Formula Drift season. When running the program, it greets the user and displays the names of all upcoming events. It then asks the user which round they would like more information about. Then displays more information about the chosen round. It then give the user the options to see the schedule again, pick a round to learn more about or to type in exit to exit the program. 
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once installed, simply enter ./bin/fd_schedule in your terminal and follow the porgrams instructions.
 
 ## Development
 
