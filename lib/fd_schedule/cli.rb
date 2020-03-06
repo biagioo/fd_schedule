@@ -23,11 +23,11 @@ class CLI
     input = nil 
    while input != "exit"
       puts "Enter the number of the event you'd like to learn more about, enter schedule to view the schedule again or type exit:"
-     # choice_array = (0..8).to_a
-      input = gets.strip.downcase 
-     # index = input.to_i - 1
-      if input.to_i > 0
-        get_events[input.to_i-1].tap do |event| 
+    choice_array = (0..8).to_a
+    input = gets.strip.downcase 
+    index = input.to_i - 1
+      if input.to_i > 0 && choice_array.include?(index)
+        get_events[index].tap do |event| 
          puts "Title: #{event.name}, League: #{event.league}, Date: #{event.date}, Location: #{event.location}, For more details: #{event.details}"
          end
       elsif input == "schedule"
