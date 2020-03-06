@@ -21,19 +21,19 @@ class CLI
   
   def menu
     input = nil 
-    until input == "exit"
-      puts "Enter the number of the event you'd like to learn more about, enter schedule to view the schedule again or type exit"
-      choice_array = (0..8).to_a
+   while input != "exit"
+      puts "Enter the number of the event you'd like to learn more about, enter schedule to view the schedule again or type exit:"
+     # choice_array = (0..8).to_a
       input = gets.strip.downcase 
-      index = input.to_i - 1
-      if choice_array.include?(index)
-        get_events[index].tap do |event| 
-         puts "Name: #{event.name} League: #{event.league} Date: #{event.date} Location: #{event.location} For more details: #{event.details}"
+     # index = input.to_i - 1
+      if input.to_i > 0
+        get_events[input.to_i-1].tap do |event| 
+         puts "Title: #{event.name}, League: #{event.league}, Date: #{event.date}, Location: #{event.location}, For more details: #{event.details}"
          end
-      # elsif input == "exit"
-      #   fairwell
       elsif input == "schedule"
         schedule
+      elsif input == "exit"
+        fairwell
       else
         puts "hmm, I don’t think that was one of the options"
        end
