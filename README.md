@@ -3,20 +3,9 @@
 Welcome! I've created a program that scrapes the schedule for the 2020 Formula Drift season. When running the program, it greets the user and displays the names of all upcoming events. It then asks the user which round they would like more information about. Then displays more information about the chosen round. It then give the user the options to see the schedule again, pick a round to learn more about or to type in exit to exit the program. 
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'fd_schedule'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install fd_schedule
+Here is the link to download or clone my fd_schedule
+https://github.com/biagioo/fd_schedule
+Once downloaded or cloned, to run the file enter './bin/fd_schedule' in your terminal and enjoy!
 
 ## Usage
 
