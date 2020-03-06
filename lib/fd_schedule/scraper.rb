@@ -15,7 +15,6 @@ class Scraper
       }
       events << event
     end
-    
     events.each do |event| 
       Events.new(*event.values)
     end

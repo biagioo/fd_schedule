@@ -12,7 +12,6 @@ class CLI
   
   def schedule 
     puts "Here is the 2020 Schedule"
-    
     get_events.each.with_index do |event, i| 
       puts "#{i+1} -- #{event.name}"
     end
@@ -35,7 +34,7 @@ class CLI
       elsif input == "exit"
         fairwell
       else
-        puts "hmm, I don’t think that was one of the options"
+        puts "Invalid input."
        end
     end 
   end
@@ -43,6 +42,5 @@ class CLI
   def fairwell 
     puts "Thanks for stopping by! Enjoy the rest of your day!"
   end 
-
 
 end 
