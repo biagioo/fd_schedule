@@ -27,12 +27,13 @@ class CLI
     index = input.to_i - 1
       if input.to_i > 0 && choice_array.include?(index)
         get_events[index].tap do |event| 
+         puts
          puts "Title: #{event.name}"
          puts "League: #{event.league}" 
          puts "Date: #{event.date}"
          puts "Location: #{event.location}"
          puts "For more details: #{event.details}"
-         puts " "
+         puts 
          end
       elsif input == "schedule"
         schedule
