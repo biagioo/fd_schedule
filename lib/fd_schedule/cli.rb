@@ -22,7 +22,7 @@ class CLI
     input = nil 
    while input != "exit"
       puts "Enter the number of the event you'd like to learn more about, enter schedule to view the schedule again or type exit:"
-    choice_array = (0..8).to_a #users only have the choice of 9 events, their choice -1 is the index where that event is stored in the array.
+    choice_array = (0..8).to_a 
     input = gets.strip.downcase 
     index = input.to_i - 1
       if input.to_i > 0 && choice_array.include?(index)
